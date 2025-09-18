@@ -10,9 +10,28 @@ class SearchConstants:
     # Поисковые термины (можно заменить на python, java, javascript и т.д.)
     DEFAULT_SEARCH_QUERY = "golang OR go developer"
     LANGUAGE_KEYWORDS = ['go', 'golang']
+
+    # DEFAULT_SEARCH_QUERY = "javascript OR typescript OR nodejs OR react OR vue OR JS"
+    # LANGUAGE_KEYWORDS = ['javascript', 'typescript', 'node', 'react', 'vue', 'js', 'ts']
+
+    # DEFAULT_SEARCH_QUERY = "python OR django OR flask OR fastapi"
+    # LANGUAGE_KEYWORDS = ['python', 'django', 'flask', 'fastapi']
+
+    # DEFAULT_SEARCH_QUERY = "java developer OR spring OR kotlin"
+    # LANGUAGE_KEYWORDS = ['java', 'spring', 'kotlin']
+
+    # DEFAULT_SEARCH_QUERY = "c# developer OR csharp OR .net OR dotnet OR asp.net"
+    # LANGUAGE_KEYWORDS = ['c#', 'с#', '.net', 'dotnet', 'asp.net']
+
+    # DEFAULT_SEARCH_QUERY = "c++ OR cpp"
+    # LANGUAGE_KEYWORDS = ['c++', 'с++', 'cpp']
+
+    # DEFAULT_SEARCH_QUERY = "rust developer"
+    # LANGUAGE_KEYWORDS = ['rust']
+
     
-    # Исключаемые слова (тут руководящие позиции, но можно вставить свои слова)
-    EXCLUDED_WORDS = ['lead', 'лид', 'руководитель', 'ментор', 'преподаватель', 'менеджер']
+    # Исключаемые слова (тут руководящие позиции и тестирование, но можно вставить свои слова)
+    EXCLUDED_WORDS = ['lead', 'лид', 'руководитель', 'ментор', 'преподаватель', 'менеджер', 'QA', 'AQA']
 
 class HHVacancyParser:
     def __init__(self, db_path: str = "vacancies.db"):

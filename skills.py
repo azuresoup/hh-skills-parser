@@ -32,7 +32,7 @@ STOP_WORDS = {
     'sber', 'tinkoff', 'avito', 'wildberries', 'kaspersky', 'jetbrains',
     
     # График работы и прочий мусор
-    '5', '2', 'b2b', 'b2c', 'java', 'schedule', 'remote', 'office', 'salary',
+    '5', '2', 'b2b', 'b2c', 'schedule', 'remote', 'office', 'salary',
     
     # Технический мусор  
     'quot', 'ru', 'etc', 'er', 'e', 'o', 'nbsp', 'amp', 'gt', 'lt', 'strong', 'em', 'br',
@@ -81,9 +81,9 @@ class SkillAnalyzer:
         # Очищаем HTML теги
         clean_text = bleach.clean(text, tags=[], strip=True)
         
-        # Извлекаем слова и составные термины (с дефисами, слешами)
-        words = re.findall(r'[A-Za-z0-9]+(?:[/\-][A-Za-z0-9]+)*', clean_text)
-        
+        # Извлекаем слова, включая C++, C#, и составные термины
+        words = re.findall(r'[Cc]\+\+|[Cc]#|[A-Za-z0-9]+(?:[/\-][A-Za-z0-9]+)*', clean_text)
+
         # Приводим к нижнему регистру и фильтруем стоп-слова
         keywords = []
         for word in words:
